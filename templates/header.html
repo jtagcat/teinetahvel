@@ -1,0 +1,64 @@
+{{define "header.html"}}
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<!-- https://github.com/jtagcat/teinetahvel -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="data:image/png;base64,">
+	<style>
+	    body{
+		    margin:1em auto;
+		    max-width:45em;
+		    padding:0 .62em;
+		    font:1.2em/1.62 sans-serif
+	    }
+	    h1,h2,h3{
+		    line-height:1.2
+	    }
+
+	    /* added by hugo theme */
+	    header > h1{margin-bottom:0}
+	    header{margin-bottom:1em}
+
+	    /* added by hugo theme */
+	    .mainblack {color:#000}
+	    .novisited:visited {color:#000}
+	    .novisited:hover, .novisited:visited:hover {color:#111}
+
+	    /* added by hugo theme */
+	    blockquote {
+		    margin-left: 0;
+		    padding-left: 1em;
+		    border-inline-start: 0.25em solid #000;
+	    }
+	    pre {
+		    background: #eee;
+		    overflow-y: auto;
+		    padding: 0.5em;
+	    }
+
+	    @media print{
+		    body{max-width:none}
+	    }
+
+	    @media (prefers-color-scheme: dark){
+		    body {color:#fff;background:#000}
+
+		    .mainblack {color:#fff}
+		    .novisited:visited {color:#fff}
+		    .novisited:hover, .novisited:visited:hover {color:#eee}
+
+		    a {color:#8abfff}
+		    a:hover, a:visited:hover {color:#def}
+		    a:visited {color:#dcf}
+
+		    blockquote {border-inline-start: 0.25em solid #fff}
+		    pre {background: #222;}
+	    }
+
+		table {
+			border-spacing: 0.5em;
+		}
+    </style>
+</head>
+{{end}}

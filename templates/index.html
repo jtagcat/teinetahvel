@@ -1,0 +1,65 @@
+{{template "header.html"}}
+{{template "morestyle.html"}}
+<h1>{{.title}}</h1>
+
+Sisene Mobiil-ID-ga:
+<form action="/login" method="POST">
+<table class="logintable" role="presentation"><tbody> <!-- from TARA -->
+                        <tr>
+                            <td class="col-label"><label for="idCode" class="form-label">Isikukood</label></td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">EE</span>
+                                    </div>
+                                    <input type="text" inputmode="numeric" id="idCode" class="form-control" name="idCode" autocomplete="username" {{ with .prefillIdCode }}value="{{.}}"{{ end }}>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-label">
+                                <label for="phone" class="form-label">Telefoninumber</label>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">+372</span>
+                                    </div>
+                                    <input type="tel" maxlength="15" id="phone" class="form-control" name="phone" autocomplete="tel" {{ with .prefillPhone }}value="{{.}}"{{ end }}>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button class="c-btn" type="submit">Jätka</button>
+                            </td>
+                        </tr>
+                        </tbody></table>
+</form>
+
+<div style="padding-top: 2em;"><div style="rotate: 10deg"><span class="flash"><b>Üldsegi mitte kahtlust äratav väga turvaline sisselogimine™</b><br>* Maitsekas disain<br>* Isikuandmeid ei talletata</span></div></div>
+
+<hr>
+<p>Lähtekood: <a href="https://github.com/jtagcat/teinetahvel">github.com/jtagcat/teinetahvel</a></p>
+<p>Eelised Tahvli ees:</p>
+<ul>
+<li>Kellaajapõhine otsing (mis töötab!!)</li>
+<li>Linnukene leiab klaveriga klassid (🎹 MUBA tabeli põhjal)</li>
+<li>Klassid, mida pole olemas või ligipääs puudub on peidetud</li>
+<li>Puuduvat ligipääsuinfot kompenseerib 'Ei saa ligi' nupp, mis salvestab teabe kõigile sama eriala õpilastele (sabotaažiga kaasneb enesesabotaaž)</li>
+<li>Paar nuppu ja juba tehtud</li>
+<li>Vähem kohmakas sisselogimine</li>
+<li>Ei logi kohe välja</li>
+<li>Jätab Mobiil-ID küpsisesse, nii on sisselogimine(™) kiirem</li>
+<li>(Saab ka välja logida)</li>
+<li>Jobude tabel: Muidugi mõnikord ongi nii, aga kas tõesti harjutad 9 tundi järjest?</li>
+<li>Töötab telefonis üllatavalt hästi (arvasin, et sama hästi kui Tahvel, aga elu üllatab)</li>
+<li>Ajuvaba ehitus — mida lihtsam, seda vähem on katki ja kiirem ümber teha.</li>
+<li>Iga päev ei peagi mitu (olnud kordi, kus kümme) minutit seda lollust vahtima!</li>
+<li>(Näita ja loobu broneeringutest)</li>
+</ul>
+
+<p>kuhu ma arve esitan? Te kasutate Smart-ID-d?</p>
+
+{{ with .footerHTML -}}<hr>{{.}}{{- end -}}

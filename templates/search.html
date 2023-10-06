@@ -1,0 +1,103 @@
+{{template "header.html"}}
+{{template "morestyle.html"}}
+
+{{ with .bookings }}{{- if ne (len .) 0 -}}
+<div>
+  <h2>{{ if (eq (len .) 1) }}1 broneering{{ else }}{{ len . }} broneeringut{{ end }}</h2>
+  <table>
+    <tr>
+      <td></td>
+      <td>Ruum</td>
+      <td>Kuupäev</td>
+      <td>Algus</td>
+      <td>Lõpp</td>
+    </tr>
+    {{- range . -}}
+    <tr>
+      <td><a href="/cancel?id={{ .Id }}">Loobu</a></td>
+      <td>{{ .RoomStr }}</td>
+      <td>{{ .DateStr }}</td>
+      <td>{{ .TimeStart }}</td>
+      <td>{{ .TimeEnd }}</td>
+    </tr>
+    {{ end }}
+  </table>
+</div>
+<hr>
+{{- end -}}{{- end -}}
+
+{{- with .unknownACL -}}🙀 {{.}}{{- end -}}
+
+<form action="/search" method="POST">
+    <table class="logintable" role="presentation">
+        <tbody> <!-- from TARA -->
+            <tr>
+                <td class="col-label"><label for="date" class="form-label">Kuupäev</label></td>
+                <td>
+                    <input type="date" id="start" name="date" value="{{ .today }}" />
+                </td>
+            </tr>
+            <tr>
+                <td class="col-label"><label for="startTime" class="form-label">Broneeringu algus</label></td>
+                <td>
+                    <input id="startTime" type="time" name="startTime" step="300" value="{{ .now }}" />
+                </td>
+            </tr>
+            <tr>
+                <td class="col-label"><label for="stopTime" class="form-label">Broneeringu lõpp</label></td>
+                <td>
+                    <input id="stopTime" type="time" name="stopTime" step="300" value="{{ .nowplus }}" />
+                </td>
+            </tr>
+            <tr>
+                <td class="col-label"><label for="needsPiano" class="form-label">Klaver</label></td>
+                <td>
+                    <input type="checkbox" id="needsPiano" name="needsPiano" value="needsPiano">
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/logout"><button class="c-btn" style="background-color: #8b0000; border: none;" type="button">Logi välja</button></a></td>
+                <td><button class="c-btn" type="submit">Leia klass</button></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+
+
+{{ with .rooms }}{{- if ne (len .) 0 -}}
+<div>
+  <h2>{{ len . }} tulemust</h2>
+  <table>
+    {{- if $.hasCrowdsource }}<tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td style="white-space: nowrap;">Saad ligi?</td>
+    </tr>{{ end }}
+    {{- range . -}}
+    <tr>
+      <td><a href="/book?id={{ .Id }}&start={{ $.bookStart }}&stop={{ $.bookStop }}">Broneeri</a></td>
+      <td>{{ if (gt .PianoCount 1) }}2️⃣{{ end }}{{ if (eq .PianoCount 1) }}🎹{{ end }}</td>
+      <td>{{ .RoomCode }}</td>
+      <td>{{ .ResolvedEquipmnet }}</td>
+      {{- if .MissingACL }}<td><br><a href="/crowdsource?room={{ .Id }}&access=1">Jah</a> / <a href="/crowdsource?room={{ .Id }}&access=0">Ei</a></td>{{ end }}
+    </tr>
+    {{ end }}
+  </table>
+</div>
+{{- end -}}{{- end -}}
+
+{{/* TODO: conflicting */}}
+
+{{ with .dicks }}{{- if ne (len .) 0 -}}
+<div>
+<h3>Jobud</h3>
+Viietunnised broneeringud:
+<ul>
+{{- range . -}}
+<li>{{.}}</li>
+{{- end -}}
+</ul></div>
+{{- end -}}{{- end -}}
