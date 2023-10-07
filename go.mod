@@ -4,7 +4,7 @@ go 1.21.1
 
 require (
 	github.com/gin-gonic/gin v1.9.1
-	github.com/jtagcat/util v0.0.0-20231005211820-3b34773ccc19
+	github.com/jtagcat/util v0.0.0-20231007043626-e5d25c8f3ad3
 	github.com/rs/xid v1.5.0
 	go.etcd.io/bbolt v1.3.7
 )

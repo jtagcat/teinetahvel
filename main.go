@@ -95,25 +95,7 @@ func main() {
 	mainHandlers(ctx, router, db)
 	bookingHandlers(ctx, router)
 
-	srv := &http.Server{
-		Addr:    ":8080",
-		Handler: router,
-	}
-
-	slog.Info("starting server", slog.String("address", ":8080"))
-	go func() {
-		if err := srv.ListenAndServe(); err != nil {
-			slog.Error("starting server", std.SlogErr(err))
-			os.Exit(1)
-		}
-	}()
-
-	<-ctx.Done()
-	slog.Info("stopping server gracefully", slog.String("context", ctx.Err().Error()))
-	if err := srv.Shutdown(context.Background()); err != nil {
-		slog.Error("stopping server", std.SlogErr(err))
-		os.Exit(1)
-	}
+	ginutil.RunWithContext(ctx, router)
 }
 
 func authed(c *gin.Context) bool {

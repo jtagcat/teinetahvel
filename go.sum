@@ -46,6 +46,8 @@ github.com/jtagcat/util v0.0.0-20231005210800-accb5883dfc6 h1:f43NeXxJIsUdVPnM6D
 github.com/jtagcat/util v0.0.0-20231005210800-accb5883dfc6/go.mod h1:i/F8IHfZJtmpCqXvuE45351UlvZqyorUmURu2we8HtU=
 github.com/jtagcat/util v0.0.0-20231005211820-3b34773ccc19 h1:2U/FAFj+CYvFvgX45r0P7o3EPEkhkU5tV3I4rYjMj60=
 github.com/jtagcat/util v0.0.0-20231005211820-3b34773ccc19/go.mod h1:i/F8IHfZJtmpCqXvuE45351UlvZqyorUmURu2we8HtU=
+github.com/jtagcat/util v0.0.0-20231007043626-e5d25c8f3ad3 h1:BgRmE4Rq6w5mSX9RMvsOCQMjRWuB/LTlH/W+355Yjsg=
+github.com/jtagcat/util v0.0.0-20231007043626-e5d25c8f3ad3/go.mod h1:i/F8IHfZJtmpCqXvuE45351UlvZqyorUmURu2we8HtU=
 github.com/klauspost/cpuid/v2 v2.0.9/go.mod h1:FInQzS24/EEf25PyTYn52gqo7WaD8xa0213Md/qVLRg=
 github.com/klauspost/cpuid/v2 v2.2.4 h1:acbojRNwl3o09bUq+yDCtZFc1aiwaAAxtcn8YkZXnvk=
 github.com/klauspost/cpuid/v2 v2.2.4/go.mod h1:RVVoqg1df56z8g3pUjL/3lE5UfnlrJX8tyFgg4nqhuY=
