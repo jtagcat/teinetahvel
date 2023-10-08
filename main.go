@@ -77,7 +77,7 @@ func main() {
 	defer db.Close()
 
 	if err := db.Update(func(tx *bbolt.Tx) error {
-		for _, bucket := range []string{"room_acl", "crowdsourced_room_acl"} {
+		for _, bucket := range []string{"crowdsourced_room_acl"} {
 			if _, err := tx.CreateBucket([]byte(bucket)); err != nil {
 				if !errors.Is(err, bbolt.ErrBucketExists) {
 					return err
