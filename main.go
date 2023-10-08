@@ -259,10 +259,9 @@ func searchHandler(gctx context.Context, db *bbolt.DB) gin.HandlerFunc {
 		c.SetCookie("session", t.Session, user.SessionTimeoutInSeconds, "", "", !gin.IsDebugging(), true)
 
 		//
+		now := time.Now().In(TIMEZONE)
 
-		todayDate := time.Now().In(TIMEZONE)
-
-		bookings, err := t.Bookings(ctx, todayDate)
+		bookings, err := t.Bookings(ctx, now)
 		if err != nil {
 			return http.StatusBadGateway, "listing bookings: " + err.Error()
 		}
@@ -272,9 +271,9 @@ func searchHandler(gctx context.Context, db *bbolt.DB) gin.HandlerFunc {
 
 			"bookings": bookings,
 
-			"today":   todayDate.Format("2006-01-02"),
-			"now":     time.Now().Round(5 * time.Minute).Format("15:04"),
-			"nowplus": time.Now().Round(5 * time.Minute).Add(45 * time.Minute).Format("15:04"),
+			"today":   now.Format("2006-01-02"),
+			"now":     now.Round(5 * time.Minute).Format("15:04"),
+			"nowplus": now.Round(5 * time.Minute).Add(45 * time.Minute).Format("15:04"),
 		}
 
 		date, err := time.Parse("2006-01-02", c.PostForm("date"))
