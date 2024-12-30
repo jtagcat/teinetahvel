@@ -69,6 +69,8 @@ github.com/jtagcat/util v0.0.0-20240715094238-4fd7053e38e3 h1:G5R6LeIcQStdQj7gMg
 github.com/jtagcat/util v0.0.0-20240715094238-4fd7053e38e3/go.mod h1:nt4e1NOTkPM0LvXu/NHt6BsPBW4Wiopbmt89wGjuPFE=
 github.com/jtagcat/util v0.0.0-20241213035248-427207f9be6c h1:XgZoe4a9DW4Zg8hz+EtR5kUzFDJx+EBDYPl5Hm8qhSg=
 github.com/jtagcat/util v0.0.0-20241213035248-427207f9be6c/go.mod h1:EBxFwT9qg0pEXJyoTk3aWPaPjgH93MXH4UBTcDsBM3A=
+github.com/jtagcat/util v0.0.0-20241219025147-e1b0d09e4131 h1:VUQ6+fMUWUB047JBv4qGvuODXAN0lMQ8+0aFF/Bftr4=
+github.com/jtagcat/util v0.0.0-20241219025147-e1b0d09e4131/go.mod h1:vhQ/P0D4V8OxXyY5kAayJ2LCRPJ/PCWuQZWsT8Vip7I=
 github.com/klauspost/cpuid/v2 v2.0.9/go.mod h1:FInQzS24/EEf25PyTYn52gqo7WaD8xa0213Md/qVLRg=
 github.com/klauspost/cpuid/v2 v2.2.4 h1:acbojRNwl3o09bUq+yDCtZFc1aiwaAAxtcn8YkZXnvk=
 github.com/klauspost/cpuid/v2 v2.2.4/go.mod h1:RVVoqg1df56z8g3pUjL/3lE5UfnlrJX8tyFgg4nqhuY=
@@ -172,6 +174,8 @@ google.golang.org/protobuf v1.35.2 h1:8Ar7bF+apOIoThw1EdZl0p1oWvMqTHmpA2fRTyZO8i
 google.golang.org/protobuf v1.35.2/go.mod h1:9fA7Ob0pmnwhb644+1+CVWFRbNajQ6iRojtC/QF5bRE=
 google.golang.org/protobuf v1.36.0 h1:mjIs9gYtt56AzC4ZaffQuh88TZurBGhIJMBZGSxNerQ=
 google.golang.org/protobuf v1.36.0/go.mod h1:9fA7Ob0pmnwhb644+1+CVWFRbNajQ6iRojtC/QF5bRE=
+google.golang.org/protobuf v1.36.1 h1:yBPeRvTftaleIgM3PZ/WBIZ7XM/eEYAaEyCwvyjq/gk=
+google.golang.org/protobuf v1.36.1/go.mod h1:9fA7Ob0pmnwhb644+1+CVWFRbNajQ6iRojtC/QF5bRE=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=

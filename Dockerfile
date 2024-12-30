@@ -1,4 +1,4 @@
-FROM golang:1.21 AS build
+FROM golang:1.23 AS build
 
 WORKDIR /go/src/app
 
@@ -9,7 +9,7 @@ COPY tahvel tahvel
 COPY *.go ./
 RUN CGO_ENABLED=0 go build -o /go/bin/teinetahvel
 
-FROM gcr.io/distroless/static-debian11
+FROM gcr.io/distroless/static-debian12
 LABEL org.opencontainers.image.source="https://github.com/jtagcat/teinetahvel"
 
 COPY --from=build /go/bin/teinetahvel /

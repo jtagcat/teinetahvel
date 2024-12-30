@@ -6,7 +6,7 @@ toolchain go1.23.4
 
 require (
 	github.com/gin-gonic/gin v1.10.0
-	github.com/jtagcat/util v0.0.0-20241213035248-427207f9be6c
+	github.com/jtagcat/util v0.0.0-20241219025147-e1b0d09e4131
 	github.com/rs/xid v1.6.0
 	go.etcd.io/bbolt v1.3.11
 )
@@ -39,6 +39,6 @@ require (
 	golang.org/x/net v0.33.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
-	google.golang.org/protobuf v1.36.0 // indirect
+	google.golang.org/protobuf v1.36.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
